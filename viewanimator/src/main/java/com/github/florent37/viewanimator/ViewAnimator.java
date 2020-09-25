@@ -156,6 +156,8 @@ public class ViewAnimator {
 
     public void cancel() {
         if (animatorSet != null) {
+            animatorSet.removeAllListeners();
+            animatorSet.end();
             animatorSet.cancel();
         }
         if (next != null) {
